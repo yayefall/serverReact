@@ -13,7 +13,8 @@ import taskRoutes from "./routes/taskRoutes.js";
 import consomRoutes from "./routes/consomRoutes.js";
 import usersRoutes from "./routes/usersRoutes.js";
 import statsRoutes from "./routes/statsRoutes.js";
-import cleanerRoutes from "./routes/cleanerRoutes.js"
+import cleanerRoutes from "./routes/cleanerRoutes.js";
+import partRoutes from "./routes/partRoutes.js";
 import pool from "./config/db.js";
 import bcrypt from "bcrypt";
 
@@ -37,6 +38,7 @@ app.use("/api/mail", mailRoutes);
 app.use("/api/tasks", taskRoutes);
 app.use("/api/consommation", consomRoutes);
 app.use("/api/cleaner",cleanerRoutes);
+app.use("/api/partenaire",partRoutes);
 app.use("/api", usersRoutes);
 app.use("/api", statsRoutes);
 
