@@ -20,9 +20,9 @@ const Cleaner = {
     const { nomComplet,fonction, telephone, lieu, localisation } = data;
     await pool.query(
       "UPDATE cleaner SET nomComplet = ?, fonction = ?,telephone = ?, lieu = ?, localisation = ? WHERE id = ?",
-      [nomComplet,fonction, telephone, lieu, localisation]
+      [nomComplet,fonction, telephone, lieu, localisation,id]
     );
-    return { nomComplet,fonction, telephone, lieu, localisation };
+    return { id,nomComplet,fonction, telephone, lieu, localisation };
   },
 
   delete: async (id) => {
